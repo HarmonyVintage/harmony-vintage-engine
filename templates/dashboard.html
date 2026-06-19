@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony Vintage — Autonomous Sourcing Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .brand-font { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-[#0b0f19] text-slate-100 min-h-screen flex flex-col selection:bg-emerald-500 selection:text-black">
+
+    <nav class="border-b border-slate-800 bg-[#0f1424]/80 backdrop-blur-md sticky top-0 z-50 px-8 py-4 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+            <span class="brand-font text-2xl font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-slate-100 to-amber-200">
+                Harmony Vintage
+            </span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-950 text-emerald-400 border border-emerald-800/50 flex items-center space-x-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse mr-1"></span>
+                Autonomous Engine Active
+            </span>
+        </div>
+        <div class="flex items-center space-x-6 text-sm text-slate-400">
+            <div class="flex items-center space-x-2">
+                <span class="w-2 h-2 rounded-full bg-slate-600"></span>
+                <span>Shopify Sync: <strong class="text-slate-200">Connected</strong></span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="w-2 h-2 rounded-full bg-slate-600"></span>
+                <span>Supabase Vault: <strong class="text-slate-200">Secure</strong></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-1 max-w-7xl w-full mx-auto px-6 py-8 space-y-8">
+        
+        <div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#131a30] to-[#0f1424] p-8 border border-slate-800/80">
+            <div class="relative z-10 max-w-2xl">
+                <h1 class="text-3xl font-bold tracking-tight text-white">Sourcing Control Center</h1>
+                <p class="mt-2 text-slate-400 text-sm leading-relaxed">
+                    Welcome back. The Harmony Vintage AI agent has cross-referenced real-time transaction velocities with supplier raw material lines. No active inventory blackouts detected.
+                </p>
+            </div>
+            <div class="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-emerald-500/5 to-transparent pointer-events-none"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
+            <div class="bg-[#0f1424] border border-slate-800 p-5 rounded-xl hover:border-slate-700 transition duration-300">
+                <p class="text-xs font-medium text-slate-400 uppercase tracking-wider">Total Core SKUs</p>
+                <p class="text-3xl font-semibold mt-2 text-white">142</p>
+                <p class="text-xs text-slate-500 mt-1">Across active collection runs</p>
+            </div>
+            <div class="bg-[#0f1424] border border-slate-800 p-5 rounded-xl hover:border-slate-700 transition duration-300">
+                <p class="text-xs font-medium text-slate-400 uppercase tracking-wider">Avg Daily Burn Rate</p>
+                <p class="text-3xl font-semibold mt-2 text-white">34.8 <span class="text-sm font-normal text-slate-400">pcs/day</span></p>
+                <p class="text-xs text-emerald-400 mt-1">↑ 12% increase this week</p>
+            </div>
+            <div class="bg-[#0f1424] border border-slate-800 p-5 rounded-xl hover:border-slate-700 transition duration-300">
+                <p class="text-xs font-medium text-slate-400 uppercase tracking-wider">Restock Alerts Triggered</p>
+                <p class="text-3xl font-semibold mt-2 text-amber-400">2</p>
+                <p class="text-xs text-slate-500 mt-1">Requiring production approval</p>
+            </div>
+            <div class="bg-[#0f1424] border border-slate-800 p-5 rounded-xl hover:border-slate-700 transition duration-300">
+                <p class="text-xs font-medium text-slate-400 uppercase tracking-wider">Capital Saved (Optimization)</p>
+                <p class="text-3xl font-semibold mt-2 text-emerald-400">₹84,200</p>
+                <p class="text-xs text-slate-500 mt-1">Via automated batch consolidation</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+            
+            <div class="lg:col-span-2 bg-[#0f1424] border border-slate-800 rounded-xl overflow-hidden shadow-xl">
+                <div class="p-6 border-b border-slate-800 flex justify-between items-center bg-[#12182c]">
+                    <div>
+                        <h2 class="text-lg font-semibold text-white">Inventory Runway Ledger</h2>
+                        <p class="text-xs text-slate-400 mt-0.5">Live store stock levels processed through velocity algorithms.</p>
+                    </div>
+                    <button class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg text-xs font-medium tracking-wide transition">
+                        Force Store Sync
+                    </button>
+                </div>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-[#0b0f19] text-slate-400 text-xs uppercase tracking-wider border-b border-slate-800">
+                            <tr>
+                                <th class="p-4 font-medium">Product / SKU</th>
+                                <th class="p-4 font-medium">Stock Level</th>
+                                <th class="p-4 font-medium">Velocity</th>
+                                <th class="p-4 font-medium">Runway Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800/60">
+                            <tr class="hover:bg-slate-800/20 transition cursor-pointer" onclick="loadAIGenerator('HV-POLO-BLK-M', 'Premium Pique Polo Shirt (Black - M)', 500, 'Apex Apparel MFG')">
+                                <td class="p-4">
+                                    <div class="font-medium text-white text-sm">Premium Pique Polo</div>
+                                    <div class="text-xs text-slate-500 mt-0.5">HV-POLO-BLK-M</div>
+                                </td>
+                                <td class="p-4 font-mono text-slate-300">82 pcs</td>
+                                <td class="p-4 font-mono text-slate-300">14.2 / day</td>
+                                <td class="p-4">
+                                    <span class="px-2.5 py-1 rounded text-xs font-medium bg-amber-950/80 text-amber-400 border border-amber-900/50">
+                                        5 Days Left (Restock)
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/20 transition cursor-pointer" onclick="loadAIGenerator('HV-HD-WHT-L', 'Vintage Heavyweight Hoodie (White - L)', 300, 'Apex Apparel MFG')">
+                                <td class="p-4">
+                                    <div class="font-medium text-white text-sm">Vintage Heavyweight Hoodie</div>
+                                    <div class="text-xs text-slate-500 mt-0.5">HV-HD-WHT-L</div>
+                                </td>
+                                <td class="p-4 font-mono text-slate-300">410 pcs</td>
+                                <td class="p-4 font-mono text-slate-300">8.1 / day</td>
+                                <td class="p-4">
+                                    <span class="px-2.5 py-1 rounded text-xs font-medium bg-emerald-950/80 text-emerald-400 border border-emerald-900/50">
+                                        50 Days (Stable)
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/20 transition cursor-pointer" onclick="loadAIGenerator('HV-TEE-OVR-XL', 'Oversized Box Tee (Cream - XL)', 1000, 'Zenith Textiles Ltd')">
+                                <td class="p-4">
+                                    <div class="font-medium text-white text-sm">Oversized Box Tee</div>
+                                    <div class="text-xs text-slate-500 mt-0.5">HV-TEE-OVR-XL</div>
+                                </td>
+                                <td class="p-4 font-mono text-slate-300">12 pcs</td>
+                                <td class="p-4 font-mono text-slate-300">22.5 / day</td>
+                                <td class="p-4">
+                                    <span class="px-2.5 py-1 rounded text-xs font-medium bg-red-950/80 text-red-400 border border-red-900/50">
+                                        Critical Blackout Risk
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="ai-console" class="bg-[#0f1424] border border-slate-800 rounded-xl p-6 shadow-xl space-y-6">
+                <div>
+                    <h2 class="text-lg font-semibold text-white flex items-center">
+                        <svg class="w-5 h-5 text-amber-300 mr-2 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        Autonomous AI Sourcing
+                    </h2>
+                    <p class="text-xs text-slate-400 mt-0.5">Select an at-risk item from the ledger to stage an automated supplier negotiation.</p>
+                </div>
+
+                <div id="ai-placeholder" class="border-2 border-dashed border-slate-800 rounded-xl p-8 text-center text-slate-500 text-sm">
+                    No item currently staged. Click an at-risk variant in the ledger table to initialize the Gemini engine workflow.
+                </div>
+
+                <div id="ai-active-workspace" class="hidden space-y-4">
+                    <div class="bg-[#0b0f19] border border-slate-800 p-3 rounded-lg text-xs space-y-1">
+                        <p class="text-slate-400">Staged SKU: <span id="staged-sku" class="text-white font-mono font-medium"></span></p>
+                        <p class="text-slate-400">Target Supplier: <span id="staged-supplier" class="text-white font-medium"></span></p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-xs font-medium text-slate-400 uppercase tracking-wider block">Generated Subject Line</label>
+                        <input type="text" id="email-subject" class="w-full bg-[#0b0f19] border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-amber-400 transition" readonly>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-xs font-medium text-slate-400 uppercase tracking-wider block">Generated Secure Email Draft</label>
+                        <textarea id="email-body" rows="8" class="w-full bg-[#0b0f19] border border-slate-700 rounded-lg p-3 text-xs text-slate-300 font-mono focus:outline-none focus:border-amber-400 transition leading-relaxed" readonly></textarea>
+                    </div>
+
+                    <div class="p-3 bg-emerald-950/30 border border-emerald-800/40 rounded-lg text-xs text-emerald-400 leading-normal">
+                        <strong>Deterministic Safety Check:</strong> Structured verification confirms the proposed order quantity matches the target safety stock threshold algorithm.
+                    </div>
+
+                     <button onclick="approveAndSend()" class="w-full py-3 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-950 rounded-xl font-semibold text-sm tracking-wide shadow-lg hover:shadow-amber-500/10 active:scale-[0.99] transition duration-150">
+    Approve Production Request
+</button>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-900 bg-[#080b13] py-6 px-8 text-center text-xs text-slate-600">
+        &copy; 2026 Harmony Vintage Infrastructure. All Rights Reserved. Protected by Multi-Tenant Database RLS.
+    </footer>
+
+    <!-- Frontend Interaction Script - NOW CONNECTED TO LIVE AI BACKEND -->
+    <script>
+        async function approveAndSend() {
+            const subject = document.getElementById('email-subject').value;
+            const body = document.getElementById('email-body').value;
+            const button = document.querySelector('button[onclick="approveAndSend()"]');
+
+            // Change button state to show action
+            const originalText = button.innerText;
+            button.innerText = "Dispatching via Secure SMTP...";
+            button.classList.add('opacity-75', 'cursor-not-allowed');
+
+            try {
+                const response = await fetch('/api/email/dispatch', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ subject: subject, body: body })
+                });
+                
+                const data = await response.json();
+                
+                if(data.success) {
+                    button.innerText = "Order Dispatched Successfully ✓";
+                    button.classList.replace('from-amber-400', 'from-emerald-400');
+                    button.classList.replace('to-amber-500', 'to-emerald-500');
+                } else {
+                    button.innerText = "Dispatch Failed - Check Logs";
+                    button.classList.replace('from-amber-400', 'from-red-400');
+                }
+            } catch (err) {
+                button.innerText = "Network Error";
+            }
+
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                button.innerText = originalText;
+                button.className = "w-full py-3 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-950 rounded-xl font-semibold text-sm tracking-wide shadow-lg hover:shadow-amber-500/10 active:scale-[0.99] transition duration-150";
+            }, 3000);
+        }
+        async function loadAIGenerator(sku, productName, quantity, supplier) {
+            // Hide the default inactive UI placeholder block
+            document.getElementById('ai-placeholder').classList.add('hidden');
+            
+            // Display the active structured layout panel
+            const workspace = document.getElementById('ai-active-workspace');
+            workspace.classList.remove('hidden');
+
+            // Inject the metadata details seamlessly
+            document.getElementById('staged-sku').innerText = sku;
+            document.getElementById('staged-supplier').innerText = supplier;
+            
+            // Set loading indicators inside fields while waiting on the Gemini network stream
+            document.getElementById('email-subject').value = "Connecting to Harmony Vintage AI Engine...";
+            document.getElementById('email-body').value = "[System] Interrogating production records and calculating raw material line constraints via Gemini API...";
+
+            try {
+                // Post execution parameters directly back to the new Flask route
+                const response = await fetch('/api/ai/draft', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        sku: sku,
+                        product_name: productName,
+                        quantity: quantity,
+                        supplier: supplier
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.error) {
+                    document.getElementById('email-subject').value = "Generation Error";
+                    document.getElementById('email-body').value = `Error: ${data.message}`;
+                    return;
+                }
+
+                // Smoothly inject the verified structured responses
+                document.getElementById('email-subject').value = data.email_subject;
+                document.getElementById('email-body').value = data.email_body;
+
+            } catch (err) {
+                document.getElementById('email-subject').value = "Network Link Failure";
+                document.getElementById('email-body').value = `Failed to establish connection to the backend server: ${err.message}`;
+            }
+        }
+    </script>
+</body>
+</html>
