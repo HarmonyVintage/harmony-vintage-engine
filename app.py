@@ -20,16 +20,22 @@ ai_agent = HarmonyVintageAgent()
 # ---> PASTE THIS NEW LINE RIGHT HERE <---
 mailer = HarmonyVintageMailer()
 
+
 @app.route('/')
 def home():
-    """Renders the executive Harmony Vintage dashboard interface."""
-    return render_template('dashboard.html')
+       """Renders the executive Harmony Vintage dashboard interface if authenticated."""
+       return render_template('dashboard.html')
 
-@app.route('/system/health', methods=['GET'])
-def health_check():
-    """Diagnostic endpoint to verify Harmony Vintage systems and integrations."""
-    db_status = "Securely Connected" if db.client else "Disconnected (Check .env)"
-    ai_status = "Online" if ai_agent.client else "Offline (Check GEMINI_API_KEY)"
+@app.route('/api/auth', methods=['POST'])
+def authenticate():
+       """Checks the admin password against the secure vault."""
+       data = request.get_json() or {}
+       provided_password = data.get('password')
+       correct_password = os.getenv("@mansisameeer%")
+       
+       if provided_password == correct_password:
+           return jsonify({"success": True})
+       return jsonify({"success": False, "message": "Unauthorized access attempt blocked."}), 401
     
     return jsonify({
         "brand": "Harmony Vintage",
